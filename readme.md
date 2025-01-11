@@ -22,8 +22,6 @@ cd cendrol
 
 ```bash
 npm install
-npm install express mongoose bcrypt jsonwebtoken multer dotenv
-
 ```
 
 -----------------------------------------------------------------------------
@@ -31,11 +29,11 @@ npm install express mongoose bcrypt jsonwebtoken multer dotenv
 ### 3. **Set Environment Variables**
 Create a .env file in the root of your project with the following variables:
     
-    ```bash
+   
     MONGO_URI=<your-mongodb-uri>
     JWT_SECRET=<your-secret-key>
     PORT=5000 # or any other port you wish to use
-    ```
+    
 Replace <your-mongodb-uri> with your MongoDB connection string and <your-secret-key> with a strong secret for JWT authentication.
 
 ------------------------------------------------------------------------------
@@ -54,7 +52,7 @@ The server will start at http://localhost:5000.
 ## Public Endpoints
 a) Register a User
 
-POST /api/users/register
+`POST /api/users/register`
 Form-data with fields:
 name: string
 email: string
@@ -64,7 +62,7 @@ profilePicture: image file
 
 b) Login a User
 
-POST /api/users/login
+`POST /api/users/login`
 JSON Body:
 {
   "email": "example@example.com",
@@ -78,13 +76,13 @@ Add Authorization Header:
     Value: Bearer <token>
 
 a) Get All Users
-    GET /api/users/
+    `GET /api/users/`
 
 b) Get a User by ID
-    GET /api/users/:id
+    `GET /api/users/:id`
 
 c) Update a User
-    PUT /api/users/:id
+    `PUT /api/users/:id`
     Form-data with fields:
     name: string
     email: string
@@ -93,17 +91,11 @@ c) Update a User
     profilePicture: image file
 
 d) Delete a User
-    DELETE /api/users/:id
+    `DELETE /api/users/:id`
 
 --------------------------------------------------------------------------
 
 
-### 6. **Running the App Locally**
-    Clone the repository.
-    Install dependencies using "npm install".
-    Set up your ".env" file with the required variables.
-    Start your MongoDB server.
-    Start the Node.js server using npm start.
 
 
 
